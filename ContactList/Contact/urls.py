@@ -4,7 +4,7 @@ from rest_framework import routers
 from . import views
 from .views import handle_contact_crud
 router = routers.DefaultRouter()
-router.register( "" , handle_contact_crud)
+router.register( "get/" , handle_contact_crud)
 
 
 
