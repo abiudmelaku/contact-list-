@@ -8,7 +8,10 @@ from rest_framework.response import  Response
 from rest_framework import viewsets , status
 from rest_framework.decorators import api_view , action
 my_loger = logging.getLogger("my_logger")
+
 # Create your views here.
+def home(request):
+    return HttpResponse("Wellcome the my first ec2 hompage !!!")
 class handle_contact_crud(viewsets.ModelViewSet):
     serializer_class =  contact_serilazers
     queryset = contact_lst.objects.all()
