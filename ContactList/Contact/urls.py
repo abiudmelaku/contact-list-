@@ -10,7 +10,8 @@ router.register( "" , handle_contact_crud)
 
 
 urlpatterns = [
-    path("" , include(router.urls)),
+    path("",views.home),
+    path("/handle/" , include(router.urls)),
     path("Accounts/get/", views.get_Accounts),
     path("Accounts/create/" ,views.create_Account),
     
